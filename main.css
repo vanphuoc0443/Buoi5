@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    color: #ff6b35;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav a:hover {
+    color: #ff6b35;
+}
+
+.lien-he {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.lien-he a {
+    text-decoration: none;
+    color: #333;
+}
+
+.gio-hang {
+    color: #ff6b35;
+    font-weight: bold;
+}
+
+.danh-muc {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.danh-muc h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: bold;
+}
+
+.luoi-danh-muc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.muc {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.muc:hover {
+    background: #f8f9fa;
+}
+
+.muc img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.muc h3 {
+    font-size: 14px;
+    color: #333;
+    font-weight: 600;
+}
+
+.mon-an-noi-bat {
+    padding: 40px 0;
+}
+
+.luoi-mon-an {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.mon-an {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.mon-an.giam-gia .nhan-giam-gia {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff6b35;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.mon-an img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.mon-an h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.danh-muc-mon {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.gia {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff6b35;
+    margin-bottom: 12px;
+}
+
+.gia-goc {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.gia-giam {
+    color: #ff6b35;
+}
+
+.nut-dat-hang {
+    width: 100%;
+    background: #ff6b35;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nut-dat-hang:hover {
+    background: #e55a2b;
+}
+
+@media (max-width: 1024px) {
+    .luoi-mon-an {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .nav {
+        gap: 20px;
+    }
+    
+    .lien-he {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .luoi-danh-muc {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .luoi-mon-an {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .luoi-mon-an {
+        grid-template-columns: 1fr;
+    }
+    
+    .luoi-danh-muc {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
